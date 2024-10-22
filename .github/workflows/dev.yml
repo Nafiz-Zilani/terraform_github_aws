@@ -35,5 +35,5 @@ jobs:
         
       - name: Terraform Plans
         run: |
-          cd src/envs/dev  
+          cd src/envs/dev 
           terraform plan -out=tfplan
