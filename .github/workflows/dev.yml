@@ -21,19 +21,19 @@ jobs:
           mkdir -p ~/.terraform.d
           echo '{"credentials": {"app.terraform.io": {"token": "${{ secrets.TF_CLOUD_TOKEN}}"}}}' > ~/.terraform.d/credentials.tfrc.json
 
-      - name: AWS Credential Configures
-        uses: aws-actions/configure-aws-credentials@v3
-        with:
-          aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
-          aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
-          aws-region: us-east-1
+    #   - name: AWS Credential Configures
+    #     uses: aws-actions/configure-aws-credentials@v3
+    #     with:
+    #       aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
+    #       aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+    #       aws-region: us-east-1
 
-      - name: Terraform Init
-        run: |
-          cd src/envs/dev
-          terraform init
+    #   - name: Terraform Init
+    #     run: |
+    #       cd src/envs/dev
+    #       terraform init
         
-      - name: Terraform Plans
-        run: |
-          cd src/envs/dev  
-          terraform plan -out=tfplan
+    #   - name: Terraform Plans
+    #     run: |
+    #       cd src/envs/dev  
+    #       terraform plan -out=tfplan
