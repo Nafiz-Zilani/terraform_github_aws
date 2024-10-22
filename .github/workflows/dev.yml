@@ -28,12 +28,12 @@ jobs:
           aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
           aws-region: us-east-1
 
-    #   - name: Terraform Init
-    #     run: |
-    #       cd src/envs/dev
-    #       terraform init
+      - name: Terraform Init
+        run: |
+          cd src/envs/dev
+          terraform init
         
-    #   - name: Terraform Plans
-    #     run: |
-    #       cd src/envs/dev  
-    #       terraform plan -out=tfplan
+      - name: Terraform Plans
+        run: |
+          cd src/envs/dev  
+          terraform plan -out=tfplan
