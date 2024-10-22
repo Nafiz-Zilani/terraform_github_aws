@@ -30,10 +30,10 @@ jobs:
 
       - name: Terraform Init
         run: |
-          cd src/envs/dev
+          cd envs/dev
           terraform init
         
       - name: Terraform Plans
         run: |
-          cd src/envs/dev  
+          cd envs/dev  
           terraform plan -out=tfplan
