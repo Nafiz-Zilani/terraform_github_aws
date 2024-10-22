@@ -21,7 +21,7 @@ jobs:
           mkdir -p ~/.terraform.d
           echo '{"credentials": {"app.terraform.io": {"token": "${{ secrets.TF_CLOUD_TOKEN}}"}}}' > ~/.terraform.d/credentials.tfrc.json
 
-      - name: AWS Credential Configure
+      - name: AWS Credential Configures
         uses: aws-actions/configure-aws-credentials@v3
         with:
           aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
