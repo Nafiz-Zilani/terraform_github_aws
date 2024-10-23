@@ -34,8 +34,8 @@ jobs:
           pwd
           terraform init
         
-      - name: Terraform Plans
-        run: |
-          cd src/envs/dev
-          pwd
-          terraform plan -out=tfplan
+    #   - name: Terraform Plans
+    #     run: |
+    #       cd src/envs/dev
+    #       pwd
+    #       terraform plan -out=tfplan
