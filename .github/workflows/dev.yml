@@ -28,6 +28,15 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
+      - name: Verify Directory Structure
+        run: |
+          pwd
+          ls -la
+          if [ ! -d "../../blueprint" ]; then
+            echo "Error: modules directory not found"
+            exit 1
+          fi
+
       - name: Terraform Init code
         run: |
           cd src/envs/dev
