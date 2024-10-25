@@ -32,7 +32,7 @@ jobs:
         run: |
           pwd
           ls -la
-          if [ ! -d "../../blueprint" ]; then
+          if [ ! -d "../../main" ]; then
             echo "Error: modules directory not found"
             exit 1
           fi

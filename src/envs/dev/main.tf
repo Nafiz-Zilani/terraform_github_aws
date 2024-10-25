@@ -10,7 +10,7 @@ terraform {
 }
 
 module "poiridhi_dev" {
-  source = "./src/blueprint"
+  source = "./src/main"
   vpc_name = "poiridhi_dev_vpc"
   vpc_cidr = "10.11.0.0/16"
   public_subnets = ["10.11.1.0/24"]
